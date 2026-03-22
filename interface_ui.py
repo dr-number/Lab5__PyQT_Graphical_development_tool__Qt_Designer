@@ -34,6 +34,11 @@ class Ui_MainWindow(object):
             else:
                 self.lineEdit.insert('.')
 
+    def delete_last_symbol(self):
+        current_text = self.lineEdit.text()
+        if current_text:
+            self.lineEdit.setText(current_text[:-1])
+
     def insert_from_button(self, button):
         self.lineEdit.insert(button.text())
 
@@ -259,6 +264,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.pushButton_ClearAll.clicked.connect(self.lineEdit.clear) # type: ignore
+        self.pushButton_ClearLastSymbol.clicked.connect(self.delete_last_symbol)
         self.pushButton_7.clicked.connect(lambda: self.insert_from_button(self.pushButton_7))
         self.pushButton_8.clicked.connect(lambda: self.insert_from_button(self.pushButton_8))
         self.pushButton_9.clicked.connect(lambda: self.insert_from_button(self.pushButton_9))
