@@ -29,6 +29,13 @@
    </p>
 </figure>
 
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/designer.jpg">
+      <p align="center">Qt Widgets Designer</p>
+   </p>
+</figure>
+
 # Проверка адаптивности
 <figure>
    <p align="center">
