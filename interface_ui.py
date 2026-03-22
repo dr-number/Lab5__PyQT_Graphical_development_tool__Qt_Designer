@@ -229,10 +229,10 @@ class Ui_MainWindow(object):
         self.pushButton_3.clicked.connect(lambda: self.insert_from_button(self.pushButton_3))
         self.pushButton_0.clicked.connect(lambda: self.insert_from_button(self.pushButton_0))
         self.pushButton_Dot.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_Plas.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_Minus.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_Division.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_Multiplication.clicked.connect(self.lineEdit.insert) # type: ignore
+        self.pushButton_Plas.clicked.connect(lambda: self.insert_from_button(self.pushButton_Plas))
+        self.pushButton_Minus.clicked.connect(lambda: self.insert_from_button(self.pushButton_Minus))
+        self.pushButton_Division.clicked.connect(lambda: self.insert_from_button(self.pushButton_Division))
+        self.pushButton_Multiplication.clicked.connect(lambda: self.insert_from_button(self.pushButton_Multiplication))
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
