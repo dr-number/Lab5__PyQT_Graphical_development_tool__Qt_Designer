@@ -78,3 +78,31 @@
       <p align="center">Окно на весь экран</p>
    </p>
 </figure>
+
+# Главные действия программы
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-1.jpg">
+   </p>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-2.jpg">
+   </p>
+   <p align="center">Пример №1</p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-3_change_sign.jpg">
+      <p align="center">Смена знака</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-4.jpg">
+   </p>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-5.jpg">
+   </p>
+   <p align="center">Пример №2 с дробями</p>
+</figure>
