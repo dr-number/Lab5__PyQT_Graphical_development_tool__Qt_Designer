@@ -17,7 +17,14 @@
 
 <figure>
    <p align="center">
-      <img src="https://github.com/dr-number/Lab4__PyQT_Layout_Management_Widgets/blob/main/for_read_me/task.jpg">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/task.jpg">
       <p align="center">Вариант №2</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/example.jpg">
+      <p align="center">Образец варианта №2</p>
    </p>
 </figure>
