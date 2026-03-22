@@ -7,9 +7,33 @@
 
 from traceback import format_exc
 from PyQt6 import QtCore, QtGui, QtWidgets
-
+from PyQt6.QtWidgets import QMessageBox
 
 class Ui_MainWindow(object):
+
+    def add_dot(self):
+        text = self.lineEdit.text()
+        # Получаем последнее число (после последнего оператора)
+        operators = '+-*/'
+        last_operator_pos = -1
+        for op in operators:
+            pos = text.rfind(op)
+            if pos > last_operator_pos:
+                last_operator_pos = pos
+        
+        if last_operator_pos != -1:
+            current_number = text[last_operator_pos + 1:]
+        else:
+            current_number = text
+        
+        # Проверяем, нет ли уже точки в текущем числе
+        if '.' not in current_number:
+            # Если число пустое, добавляем "0."
+            if not current_number:
+                self.lineEdit.insert('0.')
+            else:
+                self.lineEdit.insert('.')
+
     def insert_from_button(self, button):
         self.lineEdit.insert(button.text())
 
@@ -19,12 +43,17 @@ class Ui_MainWindow(object):
             allowed_chars = set('0123456789+-*/.()')
             text = ''.join(c for c in text if c in allowed_chars)
 
-            self.lineEdit.setText(str(eval(text)))
+            result = str(eval(text))
+            if isinstance(result, float) and result.is_integer():
+                result = int(result)
+
+            self.lineEdit.setText(result)
         except Exception as e:
             print(
                 'equals\n'
                 f'{e}\n{format_exc()}'
             )
+            QMessageBox.warning(self, "Ошибка!", f"{e}!")
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -241,7 +270,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(lambda: self.insert_from_button(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.insert_from_button(self.pushButton_3))
         self.pushButton_0.clicked.connect(lambda: self.insert_from_button(self.pushButton_0))
-        self.pushButton_Dot.clicked.connect(self.lineEdit.insert) # type: ignore
+        self.pushButton_Dot.clicked.connect(self.add_dot)
         self.pushButton_Plas.clicked.connect(lambda: self.insert_from_button(self.pushButton_Plas))
         self.pushButton_Minus.clicked.connect(lambda: self.insert_from_button(self.pushButton_Minus))
         self.pushButton_Division.clicked.connect(lambda: self.insert_from_button(self.pushButton_Division))
@@ -251,7 +280,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Калькулятор - [Предпросмотр]"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Калькулятор"))
         self.pushButton_7.setText(_translate("MainWindow", "7"))
         self.pushButton_8.setText(_translate("MainWindow", "8"))
         self.pushButton_9.setText(_translate("MainWindow", "9"))
