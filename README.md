@@ -119,6 +119,10 @@
       <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-9_change_symbol.jpg">
       <p align="center">Смена знака</p>
    </p>
+
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-10.jpg">
+   </p>
 </figure>
 
 # Очистка поля ввода
