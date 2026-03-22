@@ -106,3 +106,32 @@
    </p>
    <p align="center">Пример №2 с дробями</p>
 </figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-8_division_by_zero.jpg">
+      <p align="center">Деление на 0</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-9_change_symbol.jpg">
+      <p align="center">Смена знака</p>
+   </p>
+</figure>
+
+# Очистка поля ввода
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-6_clear_last_symbol.jpg">
+      <p align="center">Удаление последнего символа</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-7_clear_all.jpg">
+      <p align="center">Полное очищение поля ввода</p>
+   </p>
+</figure>
