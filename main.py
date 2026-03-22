@@ -7,7 +7,7 @@
 
 import sys
 from PyQt6 import QtCore, QtGui, QtWidgets
-from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication, QMainWindow
 
 
 class Ui_MainWindow(object):
@@ -237,9 +237,15 @@ class Ui_MainWindow(object):
 
 
 
+class MainWindow(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+
+
 def main():
     app = QApplication(sys.argv)
-    window = Ui_MainWindow()
+    window = MainWindow()
     window.show()
     sys.exit(app.exec())
 
