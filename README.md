@@ -14,3 +14,10 @@
 # or
     cd /d D:\...\dir_project
     venv\Scripts\python.exe main.py
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab4__PyQT_Layout_Management_Widgets/blob/main/for_read_me/task.jpg">
+      <p align="center">Вариант №2</p>
+   </p>
+</figure>
