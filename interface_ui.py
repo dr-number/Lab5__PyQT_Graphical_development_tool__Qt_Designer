@@ -42,6 +42,38 @@ class Ui_MainWindow(object):
     def insert_from_button(self, button):
         self.lineEdit.insert(button.text())
 
+    def change_last_sign(self):
+        text = self.lineEdit.text()
+        if not text:
+            return
+        
+        # Находим последний оператор
+        operators = '+-*/'
+        last_operator_pos = -1
+        for op in operators:
+            pos = text.rfind(op)
+            if pos > last_operator_pos:
+                last_operator_pos = pos
+        
+        # Получаем последнее число
+        if last_operator_pos != -1:
+            current_number = text[last_operator_pos + 1:]
+            prefix = text[:last_operator_pos + 1]
+        else:
+            current_number = text
+            prefix = ''
+        
+        # Если число не пустое
+        if current_number:
+            # Меняем знак
+            if current_number.startswith('-'):
+                new_number = current_number[1:]  # Убираем минус
+            else:
+                new_number = '-' + current_number  # Добавляем минус
+            
+            # Собираем новую строку
+            self.lineEdit.setText(prefix + new_number)
+
     def equals(self):
         try:
             text = self.lineEdit.text()
@@ -303,6 +335,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.pushButton_ClearAll.clicked.connect(self.lineEdit.clear) # type: ignore
         self.pushButton_ClearLastSymbol.clicked.connect(self.delete_last_symbol)
+        self.pushButton_Sign.clicked.connect(self.change_last_sign)
         self.pushButton_7.clicked.connect(lambda: self.insert_from_button(self.pushButton_7))
         self.pushButton_8.clicked.connect(lambda: self.insert_from_button(self.pushButton_8))
         self.pushButton_9.clicked.connect(lambda: self.insert_from_button(self.pushButton_9))
@@ -341,5 +374,5 @@ class Ui_MainWindow(object):
         self.pushButton_Multiplication.setText(_translate("MainWindow", "*"))
         self.pushButton_Dot.setText(_translate("MainWindow", "."))
         self.pushButton_Plas.setText(_translate("MainWindow", "+"))
-        self.pushButton_Minus.setText(_translate("MainWindow", "−"))
+        self.pushButton_Minus.setText(_translate("MainWindow", "-"))
         self.pushButton_Equals.setText(_translate("MainWindow", "="))
