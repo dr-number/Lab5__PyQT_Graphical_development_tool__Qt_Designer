@@ -43,11 +43,11 @@ class Ui_MainWindow(object):
             allowed_chars = set('0123456789+-*/.()')
             text = ''.join(c for c in text if c in allowed_chars)
 
-            result = str(eval(text))
+            result = eval(text)
             if isinstance(result, float) and result.is_integer():
-                result = str(int(result))
+                result = int(result)
 
-            self.lineEdit.setText(result)
+            self.lineEdit.setText(str(result))
         except Exception as e:
             print(
                 'equals\n'
