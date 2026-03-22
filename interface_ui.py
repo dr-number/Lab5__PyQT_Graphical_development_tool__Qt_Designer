@@ -45,7 +45,7 @@ class Ui_MainWindow(object):
 
             result = str(eval(text))
             if isinstance(result, float) and result.is_integer():
-                result = int(result)
+                result = str(int(result))
 
             self.lineEdit.setText(result)
         except Exception as e:
