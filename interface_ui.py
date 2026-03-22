@@ -10,6 +10,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class Ui_MainWindow(object):
+    def insert_from_button(self, button):
+        self.lineEdit.insert(button.text())
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(337, 369)
@@ -29,7 +32,7 @@ class Ui_MainWindow(object):
         font.setPointSize(24)
         font.setBold(True)
         self.lineEdit.setFont(font)
-        self.lineEdit.setReadOnly(False)
+        self.lineEdit.setReadOnly(True)
         self.lineEdit.setObjectName("lineEdit")
         self.verticalLayout.addWidget(self.lineEdit)
         self.buttonsWidget = QtWidgets.QWidget(parent=self.centralwidget)
@@ -149,14 +152,14 @@ class Ui_MainWindow(object):
         self.pushButton_Sign.setFont(font)
         self.pushButton_Sign.setObjectName("pushButton_Sign")
         self.gridLayout.addWidget(self.pushButton_Sign, 3, 0, 1, 1)
-        self.pushButton_10 = QtWidgets.QPushButton(parent=self.buttonsWidget)
+        self.pushButton_0 = QtWidgets.QPushButton(parent=self.buttonsWidget)
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(20)
         font.setBold(True)
-        self.pushButton_10.setFont(font)
-        self.pushButton_10.setObjectName("pushButton_10")
-        self.gridLayout.addWidget(self.pushButton_10, 3, 1, 1, 1)
+        self.pushButton_0.setFont(font)
+        self.pushButton_0.setObjectName("pushButton_10")
+        self.gridLayout.addWidget(self.pushButton_0, 3, 1, 1, 1)
         self.pushButton_Multiplication = QtWidgets.QPushButton(parent=self.buttonsWidget)
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
@@ -215,16 +218,16 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.pushButton_ClearAll.clicked.connect(self.lineEdit.clear) # type: ignore
-        self.pushButton_7.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_8.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_9.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_4.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_5.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_6.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_1.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_2.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_3.clicked.connect(self.lineEdit.insert) # type: ignore
-        self.pushButton_10.clicked.connect(self.lineEdit.insert) # type: ignore
+        self.pushButton_7.clicked.connect(lambda: self.insert_from_button(self.pushButton_7))
+        self.pushButton_8.clicked.connect(lambda: self.insert_from_button(self.pushButton_8))
+        self.pushButton_9.clicked.connect(lambda: self.insert_from_button(self.pushButton_9))
+        self.pushButton_4.clicked.connect(lambda: self.insert_from_button(self.pushButton_4))
+        self.pushButton_5.clicked.connect(lambda: self.insert_from_button(self.pushButton_5))
+        self.pushButton_6.clicked.connect(lambda: self.insert_from_button(self.pushButton_6))
+        self.pushButton_1.clicked.connect(lambda: self.insert_from_button(self.pushButton_1))
+        self.pushButton_2.clicked.connect(lambda: self.insert_from_button(self.pushButton_2))
+        self.pushButton_3.clicked.connect(lambda: self.insert_from_button(self.pushButton_3))
+        self.pushButton_0.clicked.connect(lambda: self.insert_from_button(self.pushButton_0))
         self.pushButton_Dot.clicked.connect(self.lineEdit.insert) # type: ignore
         self.pushButton_Plas.clicked.connect(self.lineEdit.insert) # type: ignore
         self.pushButton_Minus.clicked.connect(self.lineEdit.insert) # type: ignore
@@ -247,7 +250,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "3"))
         self.pushButton_Division.setText(_translate("MainWindow", "/"))
         self.pushButton_Sign.setText(_translate("MainWindow", "+/-"))
-        self.pushButton_10.setText(_translate("MainWindow", "0"))
+        self.pushButton_0.setText(_translate("MainWindow", "0"))
         self.pushButton_Multiplication.setText(_translate("MainWindow", "×"))
         self.pushButton_Dot.setText(_translate("MainWindow", "."))
         self.pushButton_Plas.setText(_translate("MainWindow", "+"))
