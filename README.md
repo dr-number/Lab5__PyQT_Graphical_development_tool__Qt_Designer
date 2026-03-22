@@ -99,10 +99,10 @@
 
 <figure>
    <p align="center">
-      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-4.jpg">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-4_double.jpg">
    </p>
    <p align="center">
-      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-5.jpg">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/2-5_double.jpg">
    </p>
    <p align="center">Пример №2 с дробями</p>
 </figure>
