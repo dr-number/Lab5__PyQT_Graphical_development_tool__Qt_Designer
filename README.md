@@ -28,3 +28,39 @@
       <p align="center">Образец варианта №2</p>
    </p>
 </figure>
+
+# Проверка адаптивности
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/1-1_adaptive.jpg">
+      <p align="center">Исходное состояние окна</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/1-2_adaptive.jpg">
+      <p align="center">Окно растянуто горизонтально</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/1-3_adaptive.jpg">
+      <p align="center">Окно растянуто вертикально</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/1-4_adaptive.jpg">
+      <p align="center">Окно растянуто вертикально и горизонтально</p>
+   </p>
+</figure>
+
+<figure>
+   <p align="center">
+      <img src="https://github.com/dr-number/Lab5__PyQT_Graphical_development_tool__Qt_Designer/blob/main/for_read_me/1-5_adaptive.jpg">
+      <p align="center">Окно на весь экран</p>
+   </p>
+</figure>
